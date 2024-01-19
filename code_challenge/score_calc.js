@@ -39,4 +39,4 @@ const scoreGender = (surveys) => {
 
 
 //Exportieren
-module.exports = {scoreGender}
+module.exports = {genderFilter,avgRating,scoreGender}
