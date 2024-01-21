@@ -1,0 +1,14 @@
+
+Question:
+Scores sollen ja auf eine Dezimalstelle angegeben werden. Werden diese gerundet (6.666 => 6.7) oder einfach gecuttet (6.666 => 6.6)?
+
+Answer:
+
+
+
+
+Question:
+Um die HTTP-Anfragen zu testen, brauche ich Modul "Supertest". Da in der Datei steht dass ich Jest benutzen soll, vermute ich dass ich keine Tests für die Anfragen machen muss?
+
+
+Answer:
