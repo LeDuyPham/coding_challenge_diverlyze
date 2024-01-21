@@ -1,4 +1,4 @@
-//Es wird Supertest benötigt um HTTP calls zu testen! => Frage Louis, ob nötig
+//Es wird Supertest benötigt um HTTP calls zu testen! => Frage Louis, ob notwendig
 
 
 // const app = require('../app');
