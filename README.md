@@ -10,9 +10,9 @@ Wie startet man den Code:
 
 1. oeffne CMD
 2. cd zu den Ordner "code_challenge"
-3. starte den Code mit "npm run dev"
-
-(4.) starte die Tests mit "npm test"
+3. notwendige Module mit "npm install" runterladen
+4. starte den Code mit "npm run dev"
+5. (Optional) starte die Tests mit "npm test"
 
 Man kann nun unter "localhost:5000/scores" das Ergebnis sehen.
 
