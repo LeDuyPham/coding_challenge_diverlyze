@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
 const surveys = require('./challenge.answers.json');
-const calc = require('./score_calc');
+const {scoreGender} = require('./score_calc');
 
 
 // GET /scores 
 app.get('/scores',(req,res)=>{
-    const answer = calc.scoreGender(surveys);
+    const answer = scoreGender(surveys);
     res.json(answer);
 });
 
