@@ -27,14 +27,14 @@ const avgRating = (surveys) =>{
 /* Berechnet den Durchschnitt der Bewertungen für 'female','male','diverse'
     - Falls einer der 'Scores' eine 0 ist => alle Scores auf 0 setzten */
 const scoreGender = (surveys) => {
-    const femaleScore = avgRating(genderFilter(surveys,"female"));
-    const maleScore = avgRating(genderFilter(surveys,"male"));
-    const diverseScore = avgRating(genderFilter(surveys,"diverse"));
+    const fScore = avgRating(genderFilter(surveys,"female"));
+    const mScore = avgRating(genderFilter(surveys,"male"));
+    const dScore = avgRating(genderFilter(surveys,"diverse"));
 
-    if(femaleScore === null || maleScore === null || diverseScore === null){
-        return [null,null,null];
+    if(fScore === null || mScore === null || dScore === null){
+        return {femaleScore: null,maleScore: null,diverseScore: null};
     }
-    return [femaleScore,maleScore,diverseScore];
+    return {femaleScore: fScore,maleScore: mScore,diverseScore: dScore};
 }
 
 
