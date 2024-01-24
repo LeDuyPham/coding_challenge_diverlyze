@@ -79,27 +79,26 @@ test('9 Surveys, 4 invalid score_avg', () =>{
     - Berechnet für ungültige Surveylisten (< 2 Surveys für ein "gender")
 */
 
-//Test schlägt fehl, da Rundung nicht betrachtet wurde => Frage Louis wie die Definition von "eine Nachkommastelle" gemacht werden soll
+
 test('kleine Survey', () =>{
-    expect(calc.scoreGender(answers.f3_6m4_3d5_6)).toEqual([3.6,4.3,5.6]);
+    expect(calc.scoreGender(answers.f3_6m4_3d5_6)).toEqual({femaleScore: 3.7,maleScore:4.3,diverseScore:5.7});
 });
-//Test schlägt fehl, da Rundung nicht betrachtet wurde
 test('großer Survey', () =>{
-    expect(calc.scoreGender(answers.f5_1m5_5d5_1)).toEqual([5.1,5.5,5.1]);
+    expect(calc.scoreGender(answers.f5_1m5_5d5_1)).toEqual({femaleScore:5.1,maleScore:5.6,diverseScore:5.1});
 });
 
 test('zu wenig "female" Surveys', () =>{
-    expect(calc.scoreGender(answers.f0m6_3d4_3)).toEqual([null,null,null]);
+    expect(calc.scoreGender(answers.f0m6_3d4_3)).toEqual({femaleScore:null,maleScore:null,diverseScore:null});
 });
 
 test('zu wenig "male" Surveys', () =>{
-    expect(calc.scoreGender(answers.f4_3m0d4)).toEqual([null,null,null]);
+    expect(calc.scoreGender(answers.f4_3m0d4)).toEqual({femaleScore:null,maleScore:null,diverseScore:null});
 });
 
 test('zu wenig "diverse" Surveys', () =>{
-    expect(calc.scoreGender(answers.f7_6m8_3d0)).toEqual([null,null,null]);
+    expect(calc.scoreGender(answers.f7_6m8_3d0)).toEqual({femaleScore:null,maleScore:null,diverseScore:null});
 });
 
 test('zu wenig "female" Surveys durch ungueltiges rating', () =>{
-    expect(calc.scoreGender(answers.f2m6_3d4_3)).toEqual([null,null,null]);
+    expect(calc.scoreGender(answers.f2m6_3d4_3)).toEqual({femaleScore:null,maleScore:null,diverseScore:null});
 });
